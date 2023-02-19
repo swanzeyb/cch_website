@@ -74,9 +74,16 @@ WSGI_APPLICATION = 'cch_website.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+'default': { 
+'ENGINE': 'mysql.connector.django',
+'NAME': 'section', 
+'USER':'admin', 
+'PASSWORD':'IvEYouTaNtaR',  
+'HOST':'hackathon-dev.coxmuxsezlab.us-west-2.rds.amazonaws.com', 
+'PORT':'3306',
+'OPTIONS': {
+            'read_default_file': '/path/to/my.cnf',
+        },
     }
 }
 
